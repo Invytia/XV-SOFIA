@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis XV Años - Sofía</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@300;400;600;700&family=Pinyon+Script&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Cinzel:wght@300;400;600;700&family=Pinyon+Script&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Paleta ajustada al diseño floral blanco, lila y dorado */
+            /* Paleta ajustada: Lila vibrante y dorado */
             --blanco-fondo: #ffffff;
             --rosa-bloque: #ffffff;
             --rosa-bloque-borde: rgba(212, 175, 55, 0.4);
@@ -53,8 +53,8 @@
             margin-bottom: 50px; text-align: center;
             font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 4px;
             color: #555; animation: pulse 2.5s infinite; 
-            text-transform: uppercase;
-            background: rgba(255,255,255,0.8);
+            text-transform: uppercase; font-weight: 600;
+            background: rgba(255,255,255,0.85);
             padding: 8px 16px; border-radius: 20px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
@@ -72,7 +72,8 @@
         #main-invitation::before {
             content: '';
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            background: radial-gradient(circle at center, #ffffff 0%, #f4eff5 100%); 
+            /* Fondo Lila Elegante con Resplandor */
+            background: radial-gradient(circle at 50% 10%, #fcf5ff 0%, #e8d0ee 45%, #cfa9d6 100%); 
             z-index: -1; 
             will-change: transform; 
         }
@@ -86,9 +87,10 @@
             max-width: 500px; width: 100%;
             border: 2px solid var(--oro); 
             padding: 60px 38px 50px 38px; text-align: center; position: relative;
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            background: rgba(255, 255, 255, 0.92); /* Ligeramente translúcido para integrar el fondo lila */
+            box-shadow: 0 20px 50px rgba(108, 70, 181, 0.15); /* Sombra tintada en morado */
             border-radius: 2px; overflow: visible;
+            backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
         }
         .frame-corner {
             position: absolute; width: 20px; height: 20px;
@@ -103,51 +105,56 @@
         .hashtag-text {
             font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 26px;
             background: var(--gradiente-btn); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            margin: 10px 0 25px 0; letter-spacing: 1px; font-weight: 500;
+            margin: 10px 0 25px 0; letter-spacing: 1px; font-weight: 700;
         }
 
         .section-heading {
-            font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 26px; font-weight: 500;
+            font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 26px; font-weight: 600;
             letter-spacing: 1px; color: var(--text-rose); text-transform: none; margin-bottom: 16px; line-height: 1.3;
         }
         .section-heading-sm {
-            font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 20px; font-weight: 500; 
+            font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 20px; font-weight: 600; 
             letter-spacing: 1px; color: var(--text-rose); margin-bottom: 12px;
         }
+        
+        /* Ajustes de grosor para la sección principal */
         .section-tag {
-            font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 16px; letter-spacing: 2px; 
-            color: var(--text-rose); margin-bottom: 14px; font-weight: 500;
+            font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 18px; letter-spacing: 2px; 
+            color: var(--text-rose); margin-bottom: 14px; font-weight: 700;
         }
         .main-title {
             font-family: 'Pinyon Script', cursive; font-size: 96px; 
             background: var(--gradiente-btn); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            margin-bottom: 5px; line-height: 0.9; padding-bottom: 5px;
+            margin-bottom: 5px; 
+            line-height: 1.3; /* Aumentado para no cortar los trazos largos */
+            padding: 0 15px; /* Espaciado extra a los lados para la 'f' y la 'S' */
         }
-        .full-name { 
-            font-family: 'Cinzel', serif; font-size: 18px; letter-spacing: 6px; 
-            color: var(--text-deep); margin-bottom: 35px; font-weight: 600; text-transform: uppercase; 
+        .phrase { 
+            font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; 
+            color: var(--text-deep); line-height: 1.6; margin-bottom: 35px; padding: 0 10px; font-weight: 600; 
         }
-        .phrase { font-family: 'EB Garamond', 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--text-deep); line-height: 1.8; margin-bottom: 35px; padding: 0 10px; font-weight: 400; }
-        .family-names { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; font-style: italic; color: var(--text-muted); line-height: 1.75; margin-top: 6px; }
-        
+        .family-names { 
+            font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; 
+            font-style: italic; color: var(--text-deep); line-height: 1.75; margin-top: 6px; 
+        }
         .info-label { 
-            font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 11px; 
+            font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 13px; 
             letter-spacing: 3px; color: var(--oro); text-transform: uppercase; 
-            margin-bottom: 8px; font-weight: 600; 
+            margin-bottom: 8px; font-weight: 700; 
         }
         .info-block { margin-bottom: 28px; }
 
         /* ====== DIVIDER ORNATE ====== */
         .divider-ornate { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 28px auto; }
-        .divider-ornate::before, .divider-ornate::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.5)); }
-        .divider-ornate::after { background: linear-gradient(to left, transparent, rgba(212, 175, 55, 0.5)); }
+        .divider-ornate::before, .divider-ornate::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.6)); }
+        .divider-ornate::after { background: linear-gradient(to left, transparent, rgba(212, 175, 55, 0.6)); }
         .divider-ornate-diamond { width: 6px; height: 6px; background: var(--text-rose); transform: rotate(45deg); flex-shrink: 0; }
 
         /* ====== COUNTDOWN ====== */
         .countdown-grid { display: flex; justify-content: center; gap: 10px; margin: 18px auto 6px auto; max-width: 340px; }
         .countdown-item { flex: 1; background: #fff; border: 1px solid var(--rosa-bloque-borde); padding: 12px 5px; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
-        .countdown-number { font-family: 'Cinzel', serif; font-size: 24px; font-weight: 400; color: var(--text-rose); display: block; }
-        .countdown-label { font-family: 'Montserrat', sans-serif; font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); font-weight: 500; }
+        .countdown-number { font-family: 'Cinzel', serif; font-size: 24px; font-weight: 600; color: var(--text-rose); display: block; }
+        .countdown-label { font-family: 'Montserrat', sans-serif; font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); font-weight: 600; }
 
         /* ====== BLOQUES GEOMÉTRICOS ====== */
         .bloque-vidrio {
@@ -167,24 +174,24 @@
         }
         .calendar-header { padding: 18px 20px 14px; text-align: center; color: var(--text-deep); position: relative; }
         .calendar-header::after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: rgba(0,0,0,0.05); }
-        .calendar-year { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 5px; text-transform: uppercase; opacity: 0.9; }
+        .calendar-year { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 5px; text-transform: uppercase; opacity: 0.9; font-weight: 600; }
         .calendar-month { margin-top: 5px; font-family: 'Pinyon Script', cursive; font-size: 36px; font-weight: 400; letter-spacing: 1px; color: var(--text-rose); }
         .calendar-body { padding: 18px 16px 20px; }
         .calendar-days-header { display: grid; grid-template-columns: repeat(7, 1fr); margin-bottom: 12px; }
-        .calendar-day-name { text-align: center; font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 1.5px; color: var(--text-muted); text-transform: uppercase; }
+        .calendar-day-name { text-align: center; font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 1.5px; color: var(--text-muted); text-transform: uppercase; font-weight: 600; }
         .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
         .cal-day {
             width: 34px; height: 34px; margin: auto; display: flex; align-items: center; justify-content: center;
-            font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--text-deep); border-radius: 50%; transition: all .3s ease;
+            font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--text-deep); border-radius: 50%; transition: all .3s ease; font-weight: 600;
         }
         .cal-day.empty { opacity: 0; }
-        .cal-day.highlight { border: 1px solid var(--text-rose); font-weight: 600; background: var(--rosa-bloque-alt); color: var(--text-rose); }
+        .cal-day.highlight { border: 1px solid var(--text-rose); background: var(--rosa-bloque-alt); color: var(--text-rose); }
         
         .btn-calendario {
             margin-top: 18px; width: 100%; border: 1px solid var(--oro); border-radius: 4px;
             padding: 14px 18px; background: transparent; color: var(--oro); display: flex;
             align-items: center; justify-content: center; gap: 10px; cursor: pointer; transition: .35s ease;
-            font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;
+            font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
         }
         .btn-calendario:hover { transform: translateY(-2px); background: rgba(212, 175, 55, 0.05); }
         .btn-calendario svg { width: 16px; height: 16px; fill: var(--oro); flex-shrink: 0; }
@@ -192,8 +199,8 @@
         /* ====== MAP CARDS ====== */
         .map-card { margin-top: 14px; border: 1px solid var(--rosa-bloque-borde); background: #fff; border-radius: 4px; overflow: hidden; text-align: left; }
         .map-card-header { background: var(--rosa-bloque-alt); border-bottom: 1px solid var(--rosa-bloque-borde); padding: 11px 15px; display: flex; flex-direction: column; gap: 2px; }
-        .map-card-tipo { font-family: 'Cinzel', serif; font-size: 7.5px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--text-rose); }
-        .map-card-nombre { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; font-weight: 600; color: var(--text-deep); line-height: 1.2; }
+        .map-card-tipo { font-family: 'Cinzel', serif; font-size: 7.5px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--text-rose); }
+        .map-card-nombre { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; font-weight: 700; color: var(--text-deep); line-height: 1.2; }
         .map-card-body { padding: 10px 14px 14px; }
         .map-wrapper { width: 100%; height: 175px; border-radius: 2px; overflow: hidden; border: 1px solid #eee; }
 
@@ -215,31 +222,31 @@
         }
         .itin-row { display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 10px; opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
         .itin-row.visible { opacity: 1; transform: translateY(0); }
-        .itin-hora { width: calc(50% - 26px); text-align: right; padding-right: 16px; font-family: 'Cinzel', serif; font-size: 9.5px; font-weight: 600; letter-spacing: 1px; color: var(--text-muted); line-height: 1.2; flex-shrink: 0; }
+        .itin-hora { width: calc(50% - 26px); text-align: right; padding-right: 16px; font-family: 'Cinzel', serif; font-size: 9.5px; font-weight: 700; letter-spacing: 1px; color: var(--text-muted); line-height: 1.2; flex-shrink: 0; }
         .itin-node { width: 26px; height: 26px; flex-shrink: 0; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; }
         .itin-node::before { content: '◆'; font-size: 14px; color: var(--oro); line-height: 1; transition: all 0.3s ease; }
         .itin-evento { width: calc(50% - 26px); padding-left: 16px; flex-shrink: 0; }
-        .itin-evento-nombre { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 21px; font-weight: 400; color: var(--text-rose); line-height: 1.1; text-align: left; }
+        .itin-evento-nombre { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 21px; font-weight: 600; color: var(--text-rose); line-height: 1.1; text-align: left; }
 
         /* ====== VESTIMENTA ====== */
         .vestimenta-icons { display: flex; justify-content: center; gap: 22px; margin-top: 14px; }
         .vestimenta-icon-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
         .vestimenta-icon-item svg { width: 28px; height: 28px; fill: var(--text-rose); opacity: 0.9; }
-        .vestimenta-icon-label { font-family: 'Cinzel', serif; font-size: 7.5px; letter-spacing: 2px; color: var(--text-muted); text-transform: uppercase; font-weight: 600;}
+        .vestimenta-icon-label { font-family: 'Cinzel', serif; font-size: 7.5px; letter-spacing: 2px; color: var(--text-muted); text-transform: uppercase; font-weight: 700;}
 
         /* ====== CONFIRMACIÓN & BOTONES ====== */
-        .rsvp-intro { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; color: var(--text-deep); line-height: 1.8; margin-bottom: 22px; }
-        .rsvp-input-label { font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 3px; color: var(--text-rose); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 8px; }
-        .rsvp-input { width: 100%; padding: 13px 16px; font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; color: var(--text-deep); background: #fff; border: 1px solid var(--rosa-bloque-borde); border-radius: 2px; outline: none; transition: border-color 0.3s, box-shadow 0.3s; }
+        .rsvp-intro { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--text-deep); line-height: 1.6; margin-bottom: 22px; font-weight: 600;}
+        .rsvp-input-label { font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 3px; color: var(--text-rose); text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 8px; }
+        .rsvp-input { width: 100%; padding: 13px 16px; font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; font-weight: 600; color: var(--text-deep); background: #fff; border: 1px solid var(--rosa-bloque-borde); border-radius: 2px; outline: none; transition: border-color 0.3s, box-shadow 0.3s; }
         .rsvp-input:focus { border-color: var(--text-rose); box-shadow: 0 0 0 3px rgba(161, 78, 159, 0.1); }
-        .rsvp-input::placeholder { font-style: italic; color: #aaa; }
+        .rsvp-input::placeholder { font-style: italic; color: #aaa; font-weight: 400; }
         .rsvp-input-wrap { margin-bottom: 18px; }
         
         .btn-confirmar {
             display: inline-flex; align-items: center; justify-content: center; gap: 12px; width: 100%;
             padding: 15px 24px; background: var(--gradiente-btn);
             color: #fff; border: none; font-family: 'Cinzel', serif; font-size: 9.5px; letter-spacing: 3px;
-            text-transform: uppercase; cursor: pointer; font-weight: 600; border-radius: 2px;
+            text-transform: uppercase; cursor: pointer; font-weight: 700; border-radius: 2px;
             box-shadow: 0 5px 15px rgba(161, 78, 159, 0.25); transition: all 0.4s ease;
             position: relative; overflow: hidden;
         }
@@ -270,7 +277,7 @@
         /* ====== LOTUS + FOOTER ====== */
         .lotus-header { margin-bottom: 20px; }
         .lotus-header svg { width: 48px; height: 48px; fill: var(--oro); }
-        .invitation-footer { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px; color: var(--text-muted); margin-top: 24px; font-weight: 600; text-transform: uppercase; }
+        .invitation-footer { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px; color: var(--text-muted); margin-top: 24px; font-weight: 700; text-transform: uppercase; }
 
         /* ====== KEYFRAMES ====== */
         @keyframes pulse { 0%,100%{opacity:0.6}50%{opacity:1} }
@@ -309,7 +316,6 @@
 
             <div class="section-tag" style="margin-top: 15px;">Mis XV Años</div>
             <h1 class="main-title">Sofía</h1>
-            <div class="full-name">Avilés Ortiz</div>
 
             <div class="hashtag-text">#MisXVSofía</div>
 
@@ -339,8 +345,8 @@
 
             <div class="bloque-vidrio">
                 <div class="section-heading">Fecha</div>
-                <div style="font-family:'Cinzel',serif;font-size:28px;font-weight:400;color:var(--text-deep);letter-spacing:3px;">11 · JUL · 2026</div>
-                <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--text-rose);margin-top:5px; font-weight:600;">Sábado</div>
+                <div style="font-family:'Cinzel',serif;font-size:28px;font-weight:600;color:var(--text-deep);letter-spacing:3px;">11 · JUL · 2026</div>
+                <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--text-rose);margin-top:5px; font-weight:700;">Sábado</div>
                 <div class="calendar-widget">
                     <div class="calendar-header">2026 <div class="calendar-month">Julio</div></div>
                     <div class="calendar-body">
@@ -371,7 +377,7 @@
                 <div class="map-card" style="margin-bottom:14px;">
                     <div class="map-card-header">
                         <span class="map-card-tipo">Ceremonia Religiosa • 3:00 P.M.</span>
-                        <span class="map-card-nombre">Ceremonia</span>
+                        <span class="map-card-nombre">Hotel Plaza Nogales</span>
                     </div>
                     <div class="map-card-body">
                         <div class="map-wrapper">
@@ -383,7 +389,7 @@
                 <div class="map-card">
                     <div class="map-card-header">
                         <span class="map-card-tipo">Recepción • 4:00 P.M.</span>
-                        <span class="map-card-nombre">Hotel Plaza Nogales</span>
+                        <span class="map-card-nombre">Jardín Hotel Plaza Nogales</span>
                     </div>
                     <div class="map-card-body">
                         <div class="map-wrapper">
@@ -435,8 +441,8 @@
 
             <div class="bloque-vidrio">
                 <div class="section-heading">Vestimenta</div>
-                <div style="font-family:'Cinzel',serif;font-size:20px;font-weight:400;letter-spacing:6px;color:var(--text-deep);margin-top:2px;">Casual</div>
-                <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--text-muted);margin-top:10px;line-height:1.6;">Lila reservado para la quinceañera.<br><strong style="font-weight: 600; color:var(--text-rose);">¡No olvides tu traje de baño!</strong></div>
+                <div style="font-family:'Cinzel',serif;font-size:20px;font-weight:600;letter-spacing:6px;color:var(--text-deep);margin-top:2px;">Casual</div>
+                <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--text-muted);margin-top:10px;line-height:1.6; font-weight:600;">Lila reservado para la quinceañera.<br><strong style="font-weight: 700; color:var(--text-rose);">¡No olvides tu traje de baño!</strong></div>
                 <div class="vestimenta-icons">
                     <div class="vestimenta-icon-item">
                         <svg viewBox="0 0 24 24"><path d="M16 2l-1 3H9L8 2H4l2 5v13h12V7l2-5h-4M9.5 10a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 9.5 13 1.5 1.5 0 0 1 8 11.5 1.5 1.5 0 0 1 9.5 10m5 0a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 14.5 13 1.5 1.5 0 0 1 13 11.5 1.5 1.5 0 0 1 14.5 10Z"/></svg>
@@ -454,7 +460,7 @@
             <div class="bloque-vidrio-alt">
                 <div class="section-heading">Mesa de Regalos</div>
                 <p class="rsvp-intro" style="margin-bottom: 12px;">El mejor regalo es tu presencia, pero si deseas tener un detalle conmigo, te sugiero la opción de:</p>
-                <div style="font-family:'Cinzel',serif;font-size:18px;font-weight:600;letter-spacing:4px;color:var(--text-rose);margin-top:6px;">Lluvia de Sobres</div>
+                <div style="font-family:'Cinzel',serif;font-size:18px;font-weight:700;letter-spacing:4px;color:var(--text-rose);margin-top:6px;">Lluvia de Sobres</div>
                 <div style="margin-top: 15px;">
                     <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="var(--oro)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21.5 6.5l-9.5 6.5-9.5-6.5"></path>
@@ -519,8 +525,8 @@
         function makeParticle(x,y,burst){
             return {
                 x,y,
-                vx:(Math.random()-0.5)*(burst?3.5:0.8),
-                vy:-Math.random()*(burst?3:0.8)-(burst?0.5:0.15),
+                vx:(Math.random()-0.5)*(burst?4.5:1.2),
+                vy:-Math.random()*(burst?4:1.2)-(burst?0.5:0.2),
                 size:Math.random()*(burst?3.5:2.5)+1.2,
                 life:burst?1:Math.random()*0.5+0.5,
                 decay:Math.random()*(burst?0.016:0.007)+0.005,
@@ -529,12 +535,12 @@
                 color:Math.random()>0.6?'212,175,55':Math.random()>0.5?'161,78,159':'255,255,255'
             };
         }
-        function createGlitterBurst(x,y){for(let i=0;i<20;i++)glitterParticles.push(makeParticle(x,y,true));}
+        function createGlitterBurst(x,y){for(let i=0;i<25;i++)glitterParticles.push(makeParticle(x,y,true));}
         function spawnAmbient(){
             if(!document.body.classList.contains('content-active'))return;
             const x=Math.random()*window.innerWidth;
             const y=Math.random()*window.innerHeight*0.8+window.scrollY;
-            for(let i=0;i<2;i++)glitterParticles.push(makeParticle(x+(Math.random()-0.5)*80,y+(Math.random()-0.5)*80,false));
+            for(let i=0;i<3;i++)glitterParticles.push(makeParticle(x+(Math.random()-0.5)*80,y+(Math.random()-0.5)*80,false));
         }
         function drawGlitter(){
             ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -561,7 +567,7 @@
             }
             requestAnimationFrame(drawGlitter);
         }
-        function startGlitter(){canvas.classList.add('visible');drawGlitter();setInterval(spawnAmbient,350);}
+        function startGlitter(){canvas.classList.add('visible');drawGlitter();setInterval(spawnAmbient,200);} /* Mayor cantidad de destellos ambientales */
         document.addEventListener('click',e=>{if(document.body.classList.contains('content-active'))createGlitterBurst(e.clientX,e.clientY);});
 
         /* ===== ITINERARIO OBSERVER ===== */
@@ -636,7 +642,7 @@
         }
 
         function addToCalendar(){
-            const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//XV Años Sofía//ES','BEGIN:VEVENT','DTSTART:20260711T150000','DTEND:20260712T020000','SUMMARY:XV Años de Sofía Avilés Ortiz','DESCRIPTION:Recepción 3PM en Hotel Plaza Nogales • Evento en Jardín 4PM','LOCATION:Hotel Plaza Nogales','STATUS:CONFIRMED','END:VEVENT','END:VCALENDAR'].join('\r\n');
+            const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//XV Años Sofía//ES','BEGIN:VEVENT','DTSTART:20260711T150000','DTEND:20260712T020000','SUMMARY:XV Años de Sofía Avilés Ortiz','DESCRIPTION:Ceremonia 3PM y Recepción 4PM en Hotel Plaza Nogales','LOCATION:Hotel Plaza Nogales','STATUS:CONFIRMED','END:VEVENT','END:VCALENDAR'].join('\r\n');
             const a=document.createElement('a');
             a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar;charset=utf-8'}));
             a.download='XV-Anios-Sofia.ics';
@@ -647,7 +653,7 @@
         const target=new Date("July 11, 2026 00:00:00").getTime();
         setInterval(()=>{
             const left=target-Date.now();
-            if(left<0){document.getElementById("countdown-timer").innerHTML="<div style='font-family:\"Cinzel\",serif;color:var(--text-rose);letter-spacing:2px;font-size:13px;'>¡Llegó el Gran Día!</div>";return;}
+            if(left<0){document.getElementById("countdown-timer").innerHTML="<div style='font-family:\"Cinzel\",serif;color:var(--text-rose);letter-spacing:2px;font-size:13px;font-weight:700;'>¡Llegó el Gran Día!</div>";return;}
             const d=Math.floor(left/86400000),h=Math.floor(left%86400000/3600000),m=Math.floor(left%3600000/60000),s=Math.floor(left%60000/1000);
             document.getElementById("days").innerText=d<10?"0"+d:d;
             document.getElementById("hours").innerText=h<10?"0"+h:h;
