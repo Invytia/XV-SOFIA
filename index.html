@@ -27,7 +27,7 @@
             background-color: #fcf5ff;
         }
 
-        /* Fondo fijo Lila presente en todo el scroll */
+        /* Fondo fijo Lila Vibrante presente en todo el scroll sin atenuación */
         body::before {
             content: '';
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
@@ -92,15 +92,14 @@
             transform: translateY(0);
         }
 
-        /* ====== FRAME ESTILO GEOMÉTRICO ====== */
+        /* ====== FRAME ESTILO GEOMÉTRICO CON TRANSPARENCIA TENUE (CORREGIDO) ====== */
         .invitation-frame {
             max-width: 500px; width: 100%;
             border: 2px solid var(--oro); 
             padding: 60px 38px 50px 38px; text-align: center; position: relative;
-            background: rgba(255, 255, 255, 0.60); /* Transparencia para dejar ver el fondo lila */
+            background: rgba(255, 255, 255, 0.90); /* Transparencia tenue y sutil para dejar ver el fondo lila vibrante */
             box-shadow: 0 20px 50px rgba(108, 70, 181, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.4); 
             border-radius: 4px; overflow: visible;
-            backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); /* Efecto Glassmorphism más fuerte */
         }
         .frame-corner {
             position: absolute; width: 20px; height: 20px;
@@ -441,7 +440,7 @@
                         <div class="itin-evento"><span class="itin-evento-nombre">Pastel</span></div>
                     </div>
                     <div class="itin-row">
-                        <span class="itin-hora">9:00 P.M.</span>
+                        <span class="itin-hora">1:00 A.M.</span>
                         <div class="itin-node"></div>
                         <div class="itin-evento"><span class="itin-evento-nombre">Fin del Evento</span></div>
                     </div>
