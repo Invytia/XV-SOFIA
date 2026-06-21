@@ -7,16 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Cinzel:wght@300;400;600;700&family=Pinyon+Script&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Paleta ajustada: Lila vibrante y dorado */
+            /* Paleta ajustada: Lila más saturado y vibrante con dorado */
             --rosa-bloque: rgba(255, 255, 255, 0.45);
-            --rosa-bloque-borde: rgba(212, 175, 55, 0.35);
-            --rosa-bloque-alt: rgba(250, 247, 252, 0.45);
+            --rosa-bloque-borde: rgba(212, 175, 55, 0.4);
+            --rosa-bloque-alt: rgba(250, 240, 255, 0.6); /* Ligeramente más lila */
             --text-deep: #3a2b40;
-            --text-rose: #a14e9f;
-            --text-muted: #64506b;
+            --text-rose: #903a8f; /* Un tono más fuerte y saturado */
+            --text-muted: #5e4566;
             --plata: #c0c0c0;
             --oro: #d4af37;
-            --gradiente-btn: linear-gradient(135deg, #6c46b5, #d659a8);
+            --gradiente-btn: linear-gradient(135deg, #7a42cc, #d14ba0);
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body, html {
@@ -24,14 +24,15 @@
             font-family: 'Cormorant Garamond', Georgia, serif;
             color: var(--text-deep);
             overflow-x: hidden;
-            background-color: #fcf5ff;
+            background-color: #f7e6ff;
         }
 
         /* Fondo fijo Lila Vibrante presente en todo el scroll sin atenuación */
         body::before {
             content: '';
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            background: radial-gradient(circle at 50% 50%, #fcf5ff 0%, #e8d0ee 50%, #cfa9d6 100%); 
+            /* Degradado más saturado y colorido */
+            background: radial-gradient(circle at 50% 50%, #fae8ff 0%, #e2a6f2 50%, #c468d9 100%); 
             z-index: -2; 
         }
 
@@ -81,7 +82,7 @@
             opacity: 1; transform: translateY(0); 
         }
 
-        /* ====== ANIMACIONES DE SCROLL (NUEVO) ====== */
+        /* ====== ANIMACIONES DE SCROLL ====== */
         .fade-in-up {
             opacity: 0;
             transform: translateY(35px);
@@ -92,13 +93,13 @@
             transform: translateY(0);
         }
 
-        /* ====== FRAME ESTILO GEOMÉTRICO CON TRANSPARENCIA TENUE (CORREGIDO) ====== */
+        /* ====== FRAME ESTILO GEOMÉTRICO ====== */
         .invitation-frame {
             max-width: 500px; width: 100%;
             border: 2px solid var(--oro); 
             padding: 60px 38px 50px 38px; text-align: center; position: relative;
-            background: rgba(255, 255, 255, 0.90); /* Transparencia tenue y sutil para dejar ver el fondo lila vibrante */
-            box-shadow: 0 20px 50px rgba(108, 70, 181, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.4); 
+            background: rgba(255, 255, 255, 0.90); /* Transparencia tenue para ver el fondo colorido */
+            box-shadow: 0 20px 50px rgba(108, 70, 181, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.5); 
             border-radius: 4px; overflow: visible;
         }
         .frame-corner {
@@ -160,7 +161,7 @@
 
         /* ====== COUNTDOWN ====== */
         .countdown-grid { display: flex; justify-content: center; gap: 10px; margin: 18px auto 6px auto; max-width: 340px; }
-        .countdown-item { flex: 1; background: rgba(255,255,255,0.6); border: 1px solid var(--rosa-bloque-borde); padding: 12px 5px; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
+        .countdown-item { flex: 1; background: rgba(255,255,255,0.75); border: 1px solid var(--rosa-bloque-borde); padding: 12px 5px; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
         .countdown-number { font-family: 'Cinzel', serif; font-size: 24px; font-weight: 600; color: var(--text-rose); display: block; }
         .countdown-label { font-family: 'Montserrat', sans-serif; font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); font-weight: 600; }
 
@@ -178,7 +179,7 @@
 
         /* ====== CALENDARIO ====== */
         .calendar-widget {
-            margin-top: 18px; background: rgba(255,255,255,0.65);
+            margin-top: 18px; background: rgba(255,255,255,0.75);
             border: 1px solid var(--rosa-bloque-borde); border-radius: 6px; overflow: hidden;
             box-shadow: 0 8px 30px rgba(0,0,0,0.03);
         }
@@ -195,11 +196,11 @@
             font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--text-deep); border-radius: 50%; transition: all .3s ease; font-weight: 600;
         }
         .cal-day.empty { opacity: 0; }
-        .cal-day.highlight { border: 1px solid var(--text-rose); background: rgba(250, 247, 252, 0.8); color: var(--text-rose); }
+        .cal-day.highlight { border: 1px solid var(--text-rose); background: rgba(250, 240, 255, 0.9); color: var(--text-rose); }
         
         .btn-calendario {
             margin-top: 18px; width: 100%; border: 1px solid var(--oro); border-radius: 4px;
-            padding: 14px 18px; background: rgba(255,255,255,0.4); color: var(--oro); display: flex;
+            padding: 14px 18px; background: rgba(255,255,255,0.6); color: var(--oro); display: flex;
             align-items: center; justify-content: center; gap: 10px; cursor: pointer; transition: .35s ease;
             font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
         }
@@ -207,17 +208,17 @@
         .btn-calendario svg { width: 16px; height: 16px; fill: var(--oro); flex-shrink: 0; }
 
         /* ====== MAP CARDS ====== */
-        .map-card { margin-top: 14px; border: 1px solid var(--rosa-bloque-borde); background: rgba(255,255,255,0.7); border-radius: 6px; overflow: hidden; text-align: left; }
-        .map-card-header { background: var(--rosa-bloque-alt); border-bottom: 1px solid var(--rosa-bloque-borde); padding: 11px 15px; display: flex; flex-direction: column; gap: 2px; }
-        .map-card-tipo { font-family: 'Cinzel', serif; font-size: 7.5px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--text-rose); }
-        .map-card-nombre { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; font-weight: 700; color: var(--text-deep); line-height: 1.2; }
-        .map-card-body { padding: 10px 14px 14px; }
-        .map-wrapper { width: 100%; height: 175px; border-radius: 4px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); }
+        .map-card { margin-top: 14px; border: 1px solid var(--rosa-bloque-borde); background: rgba(255,255,255,0.85); border-radius: 6px; overflow: hidden; text-align: left; }
+        .map-card-header { background: var(--rosa-bloque-alt); border-bottom: 1px solid var(--rosa-bloque-borde); padding: 16px 15px; text-align: center; }
+        .map-card-nombre { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-style: italic; font-weight: 700; color: var(--text-deep); line-height: 1.2; display: block; margin-bottom: 10px; }
+        .map-card-tipo { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-rose); line-height: 1.6; display: block; }
+        .map-card-body { padding: 14px; }
+        .map-wrapper { width: 100%; height: 220px; border-radius: 4px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); }
 
         /* ====== QR FOTOS ====== */
         .qr-box {
             width: 150px; height: 150px; margin: 18px auto;
-            border-radius: 6px; background: rgba(255,255,255,0.7); padding: 12px;
+            border-radius: 6px; background: rgba(255,255,255,0.85); padding: 12px;
             border: 1px solid var(--rosa-bloque-borde);
             box-shadow: 0 8px 25px rgba(0,0,0,0.03);
         }
@@ -230,13 +231,13 @@
             background: linear-gradient(to bottom, transparent, var(--oro) 8%, var(--oro) 92%, transparent);
             transform: translateX(-50%); opacity: 0.6;
         }
-        .itin-row { display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 10px; opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .itin-row { display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 14px; opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
         .itin-row.visible { opacity: 1; transform: translateY(0); }
-        .itin-hora { width: calc(50% - 26px); text-align: right; padding-right: 16px; font-family: 'Cinzel', serif; font-size: 9.5px; font-weight: 700; letter-spacing: 1px; color: var(--text-muted); line-height: 1.2; flex-shrink: 0; }
-        .itin-node { width: 26px; height: 26px; flex-shrink: 0; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; }
-        .itin-node::before { content: '◆'; font-size: 14px; color: var(--oro); line-height: 1; transition: all 0.3s ease; }
-        .itin-evento { width: calc(50% - 26px); padding-left: 16px; flex-shrink: 0; }
-        .itin-evento-nombre { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 21px; font-weight: 600; color: var(--text-rose); line-height: 1.1; text-align: left; }
+        .itin-hora { width: calc(50% - 30px); text-align: right; padding-right: 16px; font-family: 'Cinzel', serif; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: var(--text-muted); line-height: 1.2; flex-shrink: 0; }
+        .itin-node { width: 30px; height: 30px; flex-shrink: 0; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.5); border-radius: 50%; }
+        .itin-node::before { content: '◆'; font-size: 18px; color: var(--oro); line-height: 1; transition: all 0.3s ease; }
+        .itin-evento { width: calc(50% - 30px); padding-left: 16px; flex-shrink: 0; }
+        .itin-evento-nombre { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 26px; font-weight: 600; color: var(--text-rose); line-height: 1.1; text-align: left; }
 
         /* ====== VESTIMENTA ====== */
         .vestimenta-icons { display: flex; justify-content: center; gap: 22px; margin-top: 14px; }
@@ -247,7 +248,7 @@
         /* ====== CONFIRMACIÓN & BOTONES ====== */
         .rsvp-intro { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--text-deep); line-height: 1.6; margin-bottom: 22px; font-weight: 600;}
         .rsvp-input-label { font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 3px; color: var(--text-rose); text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 8px; }
-        .rsvp-input { width: 100%; padding: 13px 16px; font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; font-weight: 600; color: var(--text-deep); background: rgba(255,255,255,0.7); border: 1px solid var(--rosa-bloque-borde); border-radius: 4px; outline: none; transition: border-color 0.3s, box-shadow 0.3s; }
+        .rsvp-input { width: 100%; padding: 13px 16px; font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; font-weight: 600; color: var(--text-deep); background: rgba(255,255,255,0.85); border: 1px solid var(--rosa-bloque-borde); border-radius: 4px; outline: none; transition: border-color 0.3s, box-shadow 0.3s; }
         .rsvp-input:focus { border-color: var(--text-rose); box-shadow: 0 0 0 3px rgba(161, 78, 159, 0.15); }
         .rsvp-input::placeholder { font-style: italic; color: #9c8e9e; font-weight: 400; }
         .rsvp-input-wrap { margin-bottom: 18px; }
@@ -384,26 +385,17 @@
             <div class="info-block fade-in-up">
                 <div class="section-heading">Ubicaciones</div>
                 
-                <div class="map-card" style="margin-bottom:14px;">
-                    <div class="map-card-header">
-                        <span class="map-card-tipo">Ceremonia Religiosa • 3:00 P.M.</span>
-                        <span class="map-card-nombre">Hotel Plaza Nogales</span>
-                    </div>
-                    <div class="map-card-body">
-                        <div class="map-wrapper">
-                            <iframe src="https://maps.app.goo.gl/PKVUHQGAGQM5aQx17" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                </div>
-                
                 <div class="map-card">
                     <div class="map-card-header">
-                        <span class="map-card-tipo">Recepción • 4:00 P.M.</span>
-                        <span class="map-card-nombre">Jardín Hotel Plaza Nogales</span>
+                        <span class="map-card-nombre" style="font-size: 24px; margin-bottom: 8px;">Hotel Plaza Nogales</span>
+                        <span class="map-card-tipo" style="font-size: 13px;">
+                            Ceremonia Religiosa • 3:00 P.M.<br>
+                            Recepción • 4:00 P.M.
+                        </span>
                     </div>
                     <div class="map-card-body">
-                        <div class="map-wrapper">
-                            <iframe src="https://maps.app.goo.gl/zoSm2M3WtNFVt7kM8" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="map-wrapper" style="height: 240px;">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3410.53442178248!2d-110.9552112160557!3d31.26130949373298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d153accced422b%3A0xd443a027704db3ef!2sHotel%20Plaza%20Nogales!5e0!3m2!1ses-419!2smx!4v1782015890314!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
